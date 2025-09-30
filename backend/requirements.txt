@@ -1,0 +1,14 @@
+Flask
+langchain
+sentence-transformers
+faiss-cpu
+pymupdf
+werkzeug
+flask
+flask-cors
+python-dotenv
+pymupdf
+faiss-cpu
+langchain
+langchain-google-genai
+google-generativeai

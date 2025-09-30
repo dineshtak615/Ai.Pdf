@@ -1,0 +1,148 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Resume
+
+Resume
+
+Your Full Name
+your. emai 1example..com
+491 - XX HXHHKX
+
+City, State
+
+LinkedIn GitHub Portfolio
+
+Career Objective / Summary
+
+Detail-oriented Computer Science graduate with strong skills in Python, Flask,
+and React, Passionate about building scalable Al-driven applications and eager
+to contribute to innovative software development projects.
+
+Education
+
+Degree, Major Year of Graduation
+University/College, Location
+
+Additional achievements, GPA (optional)
+
+Skills
+
+‘Technical Skills: Python, JavaScript, Flask, React, TensorFlow, SQL, Git, Docker,
+etc.
+Soft Skills: Problem-solving, Teamwork, Communication, Adaptability, Time Man-
+
+1
+
+Resume
+
+agement
+
+Experience
+
+Job Title MMIYYyy - MMyyyYY
+Company Name
+
++ Responsibility / Achievement 1
++ Responsibility / Achievement 2
+
++ Responsibility / Achievement 3
+
+Projects
+
+Project Name (Tech Stack: Python, Flask, React)
+Short description of what it does.
+
+Your contribution / impact.
+
+Project Name (Tech Stack: ...)
+Short description.
+
+Key achievement,
+
+Certifications & Achievements
+
+Certification name Issuer (Year)
+
+Hackathon / competition achievement
+
+2
+
+Resume
+
+Relevant award / recognition
+
+Additional Information
+
+Languages: English, Hindi, [others]
+
+Interests: AI research, Open-source, Problem-solving

@@ -1,0 +1,38 @@
+Nosql Data Management
+
+
+» DIGITAL LEARNING CONTENT
+University
+
+te]
+
+n to NoSQL
+
+What is NoSQL?
+
+* NoSQL is non-relational database management system.
+
+* A NoSQL database provides a mechanism for storage and retrieval of
+data that is modeled in means other than the tabular relations used in
+relational databases.
+
+*lt is a type of Non-Relational Database system.
+
+*It follows CAP theorem rather than ACID properties of RDBMS.
+
+» DIGITAL LEARNING CONTENT
+
+Parul®
+University
+
+*Explosion of Social media sites
+(FaceBook, Twitter etc) resulting in
+generation of large data of different
+formats and size.
+
+*Rise of Cloud based technologies
+like Amazon Web Services (AWS),
+Google cloud and Microsoft Azure
+*Expansion of Open source
+communities.
+

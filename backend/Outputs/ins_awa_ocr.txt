@@ -1,0 +1,1647 @@
+q » Parul
+wee University
+
+FACULTY OF ENGINEERING AND TECHNOLOGY
+BACHELOR OF TECHNOLOGY
+
+Information and Network Security
+(303105376)
+
+SEMESTER VII
+Computer Science and Engineering Department
+
+Se tg te
+
+UL UNIVERSI
+
+Lab Manual
+
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+
+Subject Code: 303105376
+B.Tech. CSE Vear: 4 / Semester: 7
+
+Enrollno. 2203081050109
+
+CERTIFICATE
+
+Mr. Dinesh Tak with Enrollment No. 2203051050175 has successflly completed his
+laboratory experiments Information. and Network Security (303105376) from the
+department of Computer Science and Engineering during the academic year 2025-
+
+Date of Submission. Staff in charge
+
+Head of Department.
+
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+“Tech. SE Year: "/Semester:7*
+Enrollno. 2203081050109
+
+TABLE OF CONTENT
+
+[Implement Caesar cipher encryplion
+
+decryption,
+
+Tiplement Monoalphabetie cipher
+
+encryption-decryption
+
+3 | Tmaplement Playfair cipher encryption-
+
+decryption.
+
+7 | implement Polyalphabetie cipher
+
+encryption-decryption
+
+3 | Implement Hil cipher encryption-=
+
+decryption.
+
+7 | Tmaplement Simple Transposition
+
+encryption-decryption
+
+7 | Implement One time pad encryption-
+
+decryption.
+
+© | Implement Dife-Hellmen Key exchange
+
+Method.
+
+3 | Tmaplement RS
+
+eneryplion decryption
+
+TO] Demonstrate working of Digital Signature
+
+using Cryptool
+
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+“Tech. SE Year: "/Semester:7*
+Enrollno. 2203081050109
+
+PRACTICAL NO.
+
+‘Aim : Implement Caesar cipher encryption - decrypio
+
+Description : The Caesar Cipher is one of the oldest and simplest enceyption techniques, aamed after Julius
+Cassar, who allegedly used itt communicate with his generals. This substitution cipher works by shifting each
+letter i the plaintext a fixed number of positions down the alphabet, determined by a key. The Caesar Cipher i
+easy to implement and understand, making ita popular introduction to eryptography. The Caesar Cipheris type
+of substitution cipher where each letter in the plaintext is shifted a fixed numberof positions down the alphabet.
+This shift is determined by a key, which is a number that specifies how many positions each leter should be
+moved
+
+Code :
+
+de eaesar_encrypt(text, shift)
+encrypted text ="
+foe char in text
+if eharisalphag)s
+{ offset = 65 ifchar.isupper( else 97
+rerypted_char = chr((ord(char) -ascii_offset + shifh
+rrypted_text += enerypted_char
+
+6 + ascii_offset)
+
+else
+
+rrypted_text += char
+return encrypted text
+efcaesar_decrypt(text, shift)
+decrypted text ="
+foe char in text
+if eharisalpha()s
+ascil_offset = 65 ifchar.isupper() else 97
+ddectypted_char = chr((ordchar)- ascii_offset- shift) % 26 + ase
+dectypted_text += deerypted_char
+else
+ddectypted_text char
+return decrypted text
+
+while True!
+print("Caesar Cipher Program")
+
+choice = input("Enter your choice (1,2, or 3):
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+Me NaacO-+ B.Tech. CSE Year: 4" / Semester: 7*
+Enrollno. 2203081050109
+
+it choice == "1"
+text» input("Enter the text to encrypt: ")
+shift = in(input("Enter the shift value: "))
+encryped_text = caesar_encrypi(tex, shift)
+print("Enerypted text", encrypted_text)
+
+elif choice
+
+text = input("Enter the text to decrypt: ")
+shift = in(input("Enter the shift value: "))
+ecrypted_text= caesar_decrypt(text, shift)
+print("Deerypted text", decrypted_text)
+elif choice == "3":
+print("Exiting the pr
+break
+
+else
+
+print("Invalid choice. Please wy again.\n")
+
+‘main()
+
+OUTPUT:
+
+Decrypt
+
+Progx.
+
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+
+ey Subject Code: 303105376
+“Tech. CSE Year: 4"/ Semester: >
+
+Enrollno. 2203081050109
+
+‘TRYHACKME.COM - > CYBER SECURITY BASICS
+
+|) comin |
+
+Learning Objectives
+
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+B.Tech. CSE Vear: 4 / Semester: 7
+
+Enrollno. 2203081050109
+
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+“Tech. CSE Year: 4"/ Semester: >
+Enrollno. 2203081050109
+
+Summary of New Terms
+
+‘Module Operation
+
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+“Tech. SE Year: "/Semester:7*
+Enrollno. 2203081050109
+
+CRYPTOOL SOFTWARE USI
+
+Caesar / ROTTS ae
+
+
+Faculty of Engineering & Technology
+
+‘Subject Name: Information and Network Security
+Subject Code: 303105376
+B.Tech, CSE Year: 4° / Semester
+Enrollne. 2203051050109
+
+PRACTICAL NO. : 2
+
+Aim: To implement mono-alphabatic cipher for encryption ~ decryption.
+
+Description: A mono-alphabetic cipher isa typeof substitution eipher where each letter in the plaintext is
+replaced by a fixed letter in the ciphertext. This substitution is consistent throughout the eneryption process,
+‘meaning that a particular letter inthe plaintext will always be replaced by the same letter inthe ciphertext.
+
+CODE:
+
+import sting
+
+ef ereate_cipher_mapping(key)
+alphabet = string ascii_lowercase
+key = key.ower()
+/_unique = "join(sorted(set(key), key*key.index)) # Remove duplicates and maintain order
+remaining_chars = "join([e fore in alphabet if not in key_unique})
+cipher alphabet = key unique + remaining_chars
+1ap = dict(zip(alphabet, cipher_alphabet))
+1ap = dict(zip(cipher_alphabet,alphabet))
+return eneryption_map, decryption_map
+
+derencrypt(message, eneryption_map):
+enctypled_message
+for char in message.lower()
+if char in eneryption_map:
+
+rerypted_message + enerypti
+
+map char]
+
+else
+
+rypted_message += char # Keep non-alphabetic characters as is
+return encrypted message
+
+ef decrypt(message, decryption_map):
+ddectypted_message
+for char in message.lower()
+if char in deeryption_map:
+decrypted_message += decrypt
+else
+ddecrypted_message + char # Keep non-alphabetie characters as is
+return decrypted _message
+
+map| char]
+
+def maing)
+while True:
+key » input( "Enter the key forthe cipher: ")
+
+10
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+NAACO + B.Tech. CSE Year: 4” / Semester: 7"
+Enroll no. 2203081050109
+
+enctyption_map, decryption map = create cipher mapping(key)
+choice = input("Do you want to (E)nerypt or (D)ecrypt? ").upper()
+it choice
+
+message * inpul("Enter the message to encrypt
+
+encrypied cencrypt{message, eneryption
+
+print("Enerypted message", encrypted_message)
+
+elif choice
+
+npui("Enter the message to decrypt: ")
+decrypted_message™ decrypt{message, deeryption_map)
+print("Decrypted message:", deerypied_message)
+
+else
+
+print("Invalid choice. Please enter'E’ or 'D'")
+
+aanother_round™ input("Do You Want To Try It Again? (yes/n0):") lower)
+
+ifanother_round != "yes
+break
+
+‘main()
+
+ouTPU
+
+n
+
+Faculty of Engineering & Technology
+
+CBG es (CA Sieh creat nee
+
+CRYPTANALYSIS OF MONO~ ALPHABETIC CIPHER
+
+FREQUENCY ANALYSIS
+In Mono-alphabetic cipher, rather than just shifting the alphabet it could shufMle jumble) the letters arbitrarily.
+Each plaintext letter maps toa different random ciphertext letter, hence key is 26 letters lo
+
+‘The sender and the receiver decide on a randomly selected permutation ofthe letters of the alphabet. With 26
+Fetters in alphabet, the possible permutations are 26!
+
+In English Language, letters are not equally commonly used, in English Es by far the most common letter —
+followed by T.RN,LO,AS. Other letters like Z.J,K.Q.X are fairly rare. In Mono-alphabetic cipher, ith tables
+‘of single, double & triple lener frequencies for various languages.
+
+STEPS OF CRYPTAALYSIS OF MONO - ALPHABETIC CIPHER
+
+‘mono-alphabetic substitution ciphers do not change relative letter frequencies.
+calculate letter frequencies for ciphertext.
+
+‘compare counts/plots against known values.
+
+for monoalphabetic must identify each letter tables of common double‘trple letters help.
+
+the eryptanalyst knows the nature of the plaintext, then the analyst ean exploit the regularities of the
+language. The relative frequency of the letters ean be determined and compared to standard frequency
+distribution for English. Ifthe message were long enough, this technique alone might be sufficient, but
+
+relatively forthe short message, we cat
+
+CRYPTOOL SOFTWARE
+
+Prey 2°
+
+S = =— = —
+= > =
+
+2
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+B.Tech. CSE Year: 4” / Semester: 7"
+
+Enroll no. 2203081050109
+
+Moa comin ing marpton ne
+
+cet aes
+
+Moa comin ing marpton ne
+
+a
+
+
+Faculty of Engineering & Technology
+
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+B.Tech. CSE Year: 4” / Semester: 7"
+
+Enroll no. 2203081050109
+
+PRACTICAL- 3:
+
+‘Aim: Implemes
+
+Playfair cipher eneryption-decryptior
+
+Description: The Playfair cipher encrypts pairs of leters (digraphs) instead of
+substitution cipher. Ituses a SxS matrix of letters constucted usin
+twice inthe mawix. Typically"! s com
+
+positions of the letters inthe matrix
+
+Je letters asin the simple
+‘a keyword. The same letter cannot appear
+sd with 'T. Rules for encryption and deeryption depend on the
+
+cont
+
+def generate_key_matrin(key)
+key = key.uppert).replace(
+ey_matrix = ()
+
+used = set)
+
+foe char in key:
+if'char not in used and char ialpha()
+used add(char)
+key_matrix append{ char)
+
+foe char in "ABCDEFGHIKLMNOPQRSTUVWXYZ"
+if char not in used:
+used add(char)
+key_matrix append{ char)
+
+return (key_matrn[isi +S] for iin eange(0, 25, 5)
+
+def find_posii
+for iin range(S)
+for jin range(S)
+it matrin{i]fj] = chat:
+return i,j
+return None, None
+
+matrix, char):
+
+def process_text(text)
+text» textupper(.replace
+
+iso
+
+processed
+
+while i <lea(tex):
+a text]
+be textfi+ 1Jifi +1 <lentext) else
+ifn bs
+
+“
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+B.Tech. CSE Year: 4” / Semester: 7"
+
+Enroll no. 2203081050109
+
+processed t= +"X’
+ited
+
+else
+
+processed =a +b
+
+iflen(processed)
+processed +
+return processed
+
+def encrypt_pair(a, b, matrix):
+owl, coll = find_position(matrx, a)
+row2, col2 = find_position({matrix, b)
+
+if owl = row?
+
+return matis[row I][(oll + 1) % 5) + matris{row2][(col2 + 1) % 5)
+elif coll = col2:
+
+return matis[(owl +1
+else
+
+return matisrow ][col2] + matix{row2colt]
+
+[colt] + matrx{(row2 + 1) % S]feol2)
+
+def decrypt_paira, b, matrix)
+owl, coll = find_position{matrx, a)
+row2, col2 = find_position({matrix, b)
+
+if row] = ro2:
+
+return mateix[row 1c - 1) % 5] + matrix{row2][(col2 - 1) % 5)
+elif coll == col
+
+return mateix[ (cow! - 1) % S][eoll] + matrix{(row2 - 1) % 5)eo!2]
+else
+
+return matrix[row!][col2) + matrix[row2][coll]
+
+def playfir_cipher(text, matrix, mode~enerypt)
+text = process_text(text)
+result ="
+
+for iin range(O, len(text),2)
+a,b = text}, textfi + 1]
+if mode = encrypt
+result += enerypt_pait(a, b, matrix)
+else
+result += deerypt_pair(a, b, matrix)
+return result
+
+def main)
+15
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+NAACO + B.Tech. CSE Year: 4” / Semester: 7"
+
+Enroll no. 2203081050109
+
+key © input( "Enter the key
+matrix generate_key_matrix{key)
+
+mode = input(”Choose mode (enerypt/deerypt):") Jower()
+text» input("Enter text: ")
+
+iff mode = 'enerypt
+result = playfai_¢
+else
+
+ipher(text, matrix, encrypt’)
+
+result» playfair_cipher{text, matri, decrypt)
+
+print(f"Result: result)"
+‘main()
+
+ourpuT:
+
+def playfair
+result =
+
+for 4 in range(®, LenCtext), 2)
+a, b= text[i), textli + 1]
+if mode == ‘encrypt!
+
+result += encrypt_pair(a, b, matrix)
+
+sult += decrypt_pair(a, b, matrix)
+return result
+
+mainQ)
+= input("Enter the key: ").strip()
+trix = generate_key_matrix(key)
+mode = input node Cencrypt/dec Loner)
+text = input plain text
+if mode == ‘encrypt
+result = playfair_cipher(text, matrix,
+elif mode == ‘decry
+result = playfair_cipher(text, matrix, ‘decrypt')
+el
+invalid mode selected.
+
+printCerR esult}")
+
+mainQ)
+
+Enter the k
+plain text
+KGYVRVGQABIGLS
+
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+B.Tech. CSE Year: 4” / Semester: 7"
+
+Enroll no. 2203081050109
+
+Playfair cipher
+
+DPreytr cipher
+
+Fa
+
+Faculty of Engineering & Technology
+
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+B.Tech. CSE Year: 4” / Semester: 7"
+
+Enroll no. 2203081050109
+
+PRACTICAL 4:
+
+‘Aim: Implemes
+
+Polyalphabetic cipher encryption decryption (Vigenere)
+
+Description: Potyalphabetic cipher uses multiple substitution alphabets to encrypt the data. The most famous
+example isthe Vigenére cipher. This method uses a keyword where each letter inthe keyword refers toa
+different Caesar cipher shift
+
+cope:
+def enceypi(text, key)
+rypied text
+
+key = key.upper()
+
+text = textupper)
+
+key index =0
+for char in text:
+if char.salpha():
+shift = ordtkey{key_index % len(key)}) - ord’)
+ypted_char ~chr((ord(char) - ord'A') + shift) % 26 + ord’A))
+erypled_text += encrypted_char
+key index 1
+else:
+
+sypted_text += char
+return encrypted text
+
+det decrypitext, key)
+decrypted_text
+key = key:upper()
+text = textupper)
+
+key index =0
+for char in text:
+if char.salpha():
+shift = ordtkey{key_index % len(key)}) - ord)
+deerypted_char = chr((ord(char)-ordt'A')~ shift)
+decrypted_text += decrypted_char
+key index *=1
+else
+decrypted_text += char
+return decrypted_text
+
+26 + ord’A'))
+
+def main)
+
+key © input("Enter the key:
+
+ehoice = input("Do you want to Enerypt or Decrypt? ")lower()
+text = input("Enter the message: ")
+
+18
+
+NAACO +
+
+it choice == ‘encrypt
+
+result = enerypt(text, key)
+else
+
+result = deerypttext, key)
+
+print(f"Result: result)"
+
+‘main()
+
+ourru
+
+© rogram Fie Windowap
+
+key_index = 0
+
+shal)
+dectypted_char
+text += di
+
+return di
+
+key = input(
+choice =
+
+Enter the key: ")
+
+nput(*Enter’ the "
+
+Plaintext
+
+if choice ==
+result = ¢/
+
+ypt(text,
+result = di
+print(#Re:
+
+the key: DECEPTE
+
+De nt to Encrypt or Decrypt? ENC
+
+Enter the PlainText: WE ARE DISCOVERED SAVE YOU
+Result: ZI CVT WQNGRZGVTW AVZH CQYGLNG
+
+Faculty of Engineering & Technology
+
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+B.Tech. CSE Year: 4” / Semester: 7"
+
+Enroll no. 2203081050109
+
+prdCkeyCkey_index % Len(key)]) - ord(*A')
+heCCord(char) ~ ordi
+ypted_char
+
+‘At) = shift) %
+
+)-Loner()
+
+SELF
+
+19
+
+Faculty of Engineering & Technology
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+Tech. SE Year: / Semester:7"
+= Enroll no. 2203081050109
+
+PLANETCALC.
+
+Vigenére cipher
+
+Bivenecrter
+
+2
+
+o FACULTY OF ENGINEERING & TECHNOLOGY
+» Paral’ NAAC OH DEPT. OF COMPUTER SCIENCE ENGINEERING
+University INS LABORATORY (0310576)
+TECH CSE "YEAR 7™'SEMESTER
+ENROL MENTO. 2203051050109
+Praticals
+‘Aim: implement Hl cipher encryption-decryption
+Theory:
+
+‘Thebllcipherisasymmetrickeysubstitutioncipherthatencryptsblocksofplaintextusing. linear
+transformations based on matrix multiplication
+
++ Block Cipher: Operates onn-lengthbiocksoftextinsteadofsinglecharacters.
++ Key: Asquare matrix (sizenxn) ofnumbersmodulo 26
++ Eneryption:Usesmatrimutipliationottheplaintextvectorwiththekeymatri
++ Deeryption:Requirestheiaverscotthekeymatrixmodule26,
+EneryptionProcess
+
+1 KeyMatrix Setup:
+
+© Chooseanmxamatrixwith integersmodulo26 (A=0,8=1,.,2=25).0
+Ensure the matritis invertible modulo 26(\e, its determinant has a modular
+Inverse mod 26)
+
+2. Plaintext Preparation:
+© Converteachlettertoanumber(A=Oto 2-25)
+© Groupplantextintoblocksofszen. needed, padwith filer characters
+3. Mateixntltptication
+© Multipyeachbiockasacolumnvectorbythekeymatr
+© Takemodulo26oftheresul.
+4. Conversionto Ciphertext:
+1D Convertresultngnumericvaluesbacktoletters
+DecryptionProcess
+1 InversekeyMatrix
+
+© Computeinverseofthekeymatrixmodulo26.Thisrequiresmodulararithmetic and matrix
+‘operations.
+
+2. CiphertextProcessing: 0 Convertciphertextintonumber blocks.
+
+FACULTY OF ENGINEERING & TECHNOLOGY
+
+Paral’ NAAC OH DEPT. OF COMPUTER SCIENCE & ENGINEERING
+University
+
+code:
+
+INS LABORATORY (303108576)
+B.TECH CSE —41 YEAR 7"! SEMESTER
+ENROLMENT NO; 2203051080109
+
+DecryptBlocks: 0 _‘Multiplyeach blockby theinversekeymatrix modulo 26.
+
+Convertto Plaintext:
+
+Mapnumericresultsbackto letters.
+
+Importnumpy asnp fromsympyimport Matrix
+
+fromnumpy.inalgimportLinAlgError
+
+efletter_to_num(letter)
+
+returnord|etter-upper()-ord\'A) def
+
+rnum_to_letter(num):
+
+eturnehel(num%26}+ord\'A\)) def
+
+text_to_numsten):
+
+return|letter_to_num(c}forcintextifisalpha()]
+
+efnums_to_text(aums)
+
+return’ join(laum_to_letter(n}for nin aums))
+
+defpad_text(text,block_size):pad_len=block_size- len{text) block
+
+returntext+'x'*pad_len ifpad et
+
+defencrypt(text key): siz
+
+lock sizeelse text
+
+ey shape[0]
+
+text=pad_text{text.upper().replace(","") size)
+
+hums = text_to_nums(text)
+
+cipher_num:
+
+
+FACULTY OF ENGINEERING & TECHNOLOGY
+
+Parul” | NAAC (+ DEFT, OF COMPUTER SCIENCE & ENGINEERING
+University
+
+INS LABORATORY (30310576)
+B.TECH CSE —41 YEAR 7"! SEMESTER
+ENROLMENT NO; 2203051080109
+
+for \inrange(0, len(nums), siz): block=np.array(numstiiesize})
+‘enc_block=np.dot{key,block)%26 cipher_nums.extenalenc_block)
+returnnums_to_text(cipher_nums)
+
+‘def decrypt(cipher, key): sze=key.shape(0) ty
+
+sym_key=Matrix{key-tlist))inv_key=np.arraylsym_key.inv_mod(26).astypetint)
+
+‘except (Valuet:ror, LinAlgError):
+
+return’Keymatrixisnotinvertiblemod 26!"
+
+rnums=text_to_nums(cipher)
+
+plain_nums =
+
+for in range(0, len(nums), siz): block=np.array(numsiiesize})
+<dec_block=np.dot{inv_key,block)%26 plain_nums.extend{dec_block)
+returnnums_to_text(plain_nums)
+
+ifname.
+
+key 3x3-np.array((l624, 11,
+113,16, 101,
+(20,17, 151))
+
+message="ACT"
+
+cipher=encrypt(message,key_3x3) print("Encrypted:”, cipher)
+
+decrypted=decrypt{cipher,key_3x3) print("Decrypted:", decrypted)
+
+Output:
+
+
+; FACULTY OF ENGINEERING & TECHNOLOGY
+
+Parul” WAAC. DEPT. OF COMPUTER SCIENCE ENGINEERING
+Universit
+
+versity INS LABORATORY Go3108375)
+
+TECH CSE "YEAR 7™'SEMESTER
+
+ENROLMENTNO. 220051050109
+
+CCryptanalysisofilcipherCryptanalysis:
+1. Theblileipherisvulnerabletoa known-plaintext attack.
+
+© Hnxnkeysize is used, acquiring n? plaintext-ciphertext character
+pairs can compromise the key.
+
+2. Theattackmethodinvolvesinearalgebraovermodulararithmeti.
+© Constructmatricesofplaintextblocksandeiphertextblocks.
+© Solveforthekeyusingmatrixinversionandmuliplicationmodulo 26.
+3. KeyRecoveryEquation: K=C.P1{mod 26) Where:
+
+ey matrix iphertext matrix
+
+© PA{-1}=Inverseofplaintext matrixmodulo 26
+4. Thecipherlacksresistancetostatistical analysis.
+
+© Becauseit’sdeterministic,patternsinciphertextcloselyreflectpatternsin
+plaintext Blocks.
+
+5. Poorkeymatrixchoicecancreatevulnerabilities.
+
+© Anon-invertiblekeymatrix(mod26)breaksthecipher's reversibility. 0
+HHdeterminantofkey=0(mod26)orhasnomodularinverse->cipherbecomes
+unusable. 6. Hillcipherdoesn’tprovidediffusionandconfusion..
+
+© Changesininputdon’tripplefar;outputchangesarelocalizedwithinthebl
+ock,
+
+7. Attackfeasibilityincreaseswithblocksizeandplaintextvolume.
+
+(© _Largerblocksneedmoreplaintext-ciphertextpairsbutmakestatisticalrecovery easier
+if data is available.
+
+8. Nopaddingstandardmakesplaintextrecoveryeveneasier.
+
+1D Attackerscanguesspaddingschemesorinferprobabletextstructure.
+
+FACULTY OF ENGINEERING & TECHNOLOGY
+DEPT. OF COMPUTER SCIENCE & ENGINEERING
+INS LABORATORY (303105376)
+
+TECH CSE 4" YEAR 7™ SEMESTER
+[ENROLMENT NO. 220305100109
+
+Toot
+Hi Crener:
+macainaat tn: Decooes
+nO
+
+Rens Oe verrmronc 2 TL <1
+
+— oe
+ye © heres (287. A) MECOEFGMURLAMOPORST
+Reoults eieltjelejeia © Ter/omatev cm A 22 mao (LS « 10» LAT ALPHABET)
+
+1 See
+Bein on a
+POH =! @ ALM URET (26 UE, An) ABCDEFGHIIMLMNOPORSTUVWYZ,
+Sire pir ea LoS OULMORASTo
+vce Oa ou, nt Ter
+Lin bisection OQ ALPMMBET (27 OUR, At) _ABCDEFGHUMLMNOPORSTUYWHTE
+Share Paes
+eee
+
+[fw] =] —
+emul sect te per
+catmate eaves | aaE
+Selatan ncisasatome "nee
+
+‘eterna odbc bug ea? write
+
+ever 26,49) AOCRFCHRINORRASTINIT
+uae (6.0) ZACH RORSTOME
+Ouse (7 os, 1) ABCEFGHURAORORSTNE
+CO iaae (27 out) ADCDEFEHMLAROPORSTUNO
+
+Faculty of Engineering & Technology
+
+Subject Name: Information and Networ
+Subject Code: 303105376
+B.Tech. CSE Year: 4 /Semester:7"
+Enroll no. 2203081050109
+
+PRACTICAL: 06
+
+Implement Simple Transposition enctyption-decryption.
+
+Theory:
+
+‘The Simple Transposition Cipher is a classical cryptographic technique in
+which the positions of the characters in the plaintext are rearranged according
+to.a specific rule or key to form the ciphertext. Unlike substitution ciphers,
+which replace letters with other letters or symbols, the transposition cipher
+preserves the original characters but changes their order, making the plaintext
+unreadable without the correct arrangement.
+
+‘One common form of this cipher is the Columnar Transposition Cipher,
+‘where the plaintext is written row by row into a grid of fixed column size
+determined by the key, and then read column by column in a specific order.
+For example, if the key is the number of columns, the letters are written
+‘across rows and read down the columns to produce the ciphertext,
+
+Decryption works by reversing the process — the ciphertext is written into
+the grid column by column according to the key, and then read row by row t0
+reconstruct the original message. This method does not alter the actual
+
+characters, making it resistant to frequency analysis, but it can still be broken
+using anagramming techniques or brute force key searches ifthe key is small
+
+‘The simplicity and historical importance of the transposition cipher make it a
+‘good introductory example for understanding the principles of permutation in
+cryptography, as opposed to substitution. It also demonstrates the
+fundamental cryptographic principle that secrecy can be achieved through
+both confusion (changing symbols) and permutation (rearranging symbols).
+
+i Sect
+
+
+Faculty of Engineering & Technology
+
+Subject Name: information and Network Secrity
+
+Parul® Subject Code: 303105376
+SBE unvetiy NAACG}+ B.Tech. CSEVear: 4 /Semester:7™
+
+Enroll no. 2203081050109
+
+Program:
+
+import math
+
+def encrypt_transposition(plaintext, key):
+
+plaintext = plaintextreplace("","").upper()
+
+ciphertext = ["] * key
+
+forcolinrange(key)
+pointer = col
+while pointer < len(plaintext)
+ciphertext[col] = plaintext{pointer}
+pointer += key
+
+return" join( ciphertext)
+
+def decrypt_transposition(ciphertext, key): num_of rows
+
+= math.ceil(len(ciphertext) /key)
+
+‘num_of shaded _boxe:
+
+(num_of_rows * key) -len( ciphertext)
+
+plaintext =["] * num_of rows
+0
+
+for symbol in ciphertext:
+
+plaintexi{row] + symbol
+
+26
+
+
+Faculty of Englneerng & Technology
+
+Subject Name: information and Network Secrity
+
+Parul’ Subject Code: 303105376
+SBE unvetiy NAACG+ B.Tech. CSE Year: 4"/ Semester: 7"
+
+Enroll no. 2203081050109
+
+‘num_of_rows) or (row = num_of_rows - 1 and col >= key -
+‘num_of shaded _boxes):
+
+return * join(plaintext)
+
+if name__-
+
+plaintext = input("Enter plaintext:
+
+key = int(input("Enter key (number of columns): "))
+
+‘encrypted = encrypt_transposition(plaintext, key)
+
+decrypted = decrypt_transposition(encrypted, key)
+
+print("\nEnerypted Text", encrypted)
+print("Decrypted Text", decrypted)
+
+2
+
+
+Faculty of Engineering & Technology
+
+Subject Name: information and Network Secrity
+
+Enroll no. 2203081050109
+
+OUTPUT:
+
+number of
+
+Encrypted Text: MAEKET
+
+rypted Text: MEETATTHEPA
+
+INS Practical
+
+
+Faculty of Engineering & Technology
+
+uParl’, NAAC GH Bech. CS Year. @/ Semester: 79
+_ Envol no. 2203051030309
+
+PRACTICAL: 07
+
+implement Diffie-Hellman Key exchange Method.
+
+Theory:
+
+‘The Diffie-Hellman Key Exchange is a cryptographic protocol that allows
+channel without having to send the key itself. Proposed by Whitfield Diffie
+nd Martin Hellman in 1976, it was the first published method for securely
+exchanging cryptographic keys and laid the foundation for moder public key
+cryptography.
+
+‘The method relies on the mathematical difficulty of the Discrete Logarithm
+Problem. Two large numbers are publicly agreed upon: a prime modulus (p)
+and a primitive root modulo p (g), also called the generator. Each party
+selects a private key (a secret number) and computes a corresponding public
+value by raising the generator to the power of their private key modulo p.
+‘These public values are exchanged openly over the insecure channel,
+
+After receiving the other party’s public value, each participant raises it to the
+power of their own private key modulo p. Due to the properties of modular
+exponentiation, both parties compute the same result, which becomes their
+shared secret key. This key can then be used for symmetric encryption,
+
+While the Diffie-Hellman method is secure against passive eavesdropping if
+large enough parameters are chosen, its vulnerable to Man-incthe-Middle
+attacks unless combined with authentication mechanisms such as digital
+signatures or certificates. Variants like Elliptic Curve Diffie-Hellman
+(ECDH) provide the same functionality with smaller key sizes and improved
+efficiency.
+
+
+Faculty of Engineering & Technology
+
+Subj Nanton aa Newey
+Parul® Subject Code: 303105376
+SBE unvetiy NAACG}+ Bech. CS Year. @/ Semester: 79
+
+_— Enroll no. 2203051050109,
+
+Program:
+
+def diffie_hellman(p, g, private_key_a, private_key_b)
+
+public_key_a=pow(g, private _key a, p)
+
+public_key_b=pow(g, private_key_b,p)
+
+shared_secret_s
+
+1ow(public_key_b, private_key_a,p)
+
+shared_secret_b=pow(public_key_a, private_key_b, p)
+
+return public_key_a, public_key_b, shared s
+
+sret_a, shared_secret_b
+
+if __name__-
+
+‘p= int(input("Enter prime number p:"))
+_g= int(input("Enter primitive root g:"))
+
+private_key_a
+
+int(input("Enter Alice's private key: "))
+private_key_b = int(input("Enter Bob's private key: "))
+
+public_a, public_b, secret_a, secret_b=diffie_hellman(p, g, private_key_a,
+private_key_b)
+
+print("\nAlice's Public Key:", public_a)
+print("Bob’s Public Key:", public_)
+print("Alice's Shared Secret:",secret_a)
+
+print("Bob’s Shared Secret:", secret_b)
+
+0
+
+
+Faculty of Engineering & Technology
+
+Subject Name: information and Network Secrity
+
+gv yan!’ NAAC (H+ Bech eS Year ¢ Semester 7°
+- Enroll no. 2203051050109
+
+OUTPUT:
+
+
+Faculty of Engineering & Technology
+
+uParl’, NAAC GH Bech. CS Year. @/ Semester: 79
+_ Envol no. 2203051030309
+
+PRACTICAL: 08
+
+Implement One time pad eneryption-decryption.
+
+Theory:
+
+‘The One-Time Pad (OTP) is a symmetric encryption technique that offers
+perfect secrecy, meaning the ciphertext reveals no information about the
+plaintext without the key. It was first described by Gilbert Vernam in 1917
+‘and later mathematically proven secure by Claude Shannon. The method
+‘works by combining each character (orbit) of the plaintext with a
+corresponding character (or bit) from a truly random key that is the same
+length as the plaintext. The encryption is usually performed using the XOR
+‘operation in binary form or by modular addition in alphabetic form
+
+For encryption in alphabetic form, each letter of the plaintext and key is
+converted to a number (A=0, B=1, ..., Z=25). The ciphertext is generated by
+adding the plaintext and key values modulo 26, Decryption is done by
+subtracting the key values from the ciphertext values modulo 26, recovering
+the original message.
+
+‘The security of OTP comes from two conditions:
+
+1, The key must be truly random (not generated by a predictable algorithm).
+2. ‘The key must never be reused for another message.
+Ifeither condition is violated, the cipher becomes vulnerable to cryptanalysis.
+In practice, OTP is rarely used for large-scale communication due to
+difficulties in generating, distributing, and securely storing long, truly random
+keys. However, it remains an important concept in cryptography because it
+‘demonstrates the upper limit of encryption security and influences the design
+‘of modern cryptographic systems.
+
+
+Faculty of Engineering & Technology
+
+Subject Name: information and Network Secrity
+
+Parul® Subject Code: 303105376
+SBE unvetiy NAACG}+ B.Tech. CSEVear: 4 /Semester:7™
+
+Enroll no. 2203081050109
+
+Program:
+
+import random
+
+import string
+
+def generate_key(length):
+
+return" join(random.choice(string,ascii_uppercase) for _ in range(length))
+
+def encrypt_otp(plaintext, key):
+
+plaintext
+
+plaintext replace(”", ").upper()
+key = key.upper()
+
+ciphertext="
+
+for p, kin zip(plaintext, key):
+
+encrypted_char = chr(((ord(p) - ord(‘A’)) + (ord(k) - ord(‘A‘)) % 26+
+ord’)
+
+ciphertext += encrypted_char
+
+return ciphertext
+
+def decrypt_otp(ciphertext, key):
+
+ciphertext
+
+iphertext.upper()
+key = key.upper()
+
+plaintext ="
+
+for c,kinzip(ciphertext, key)
+
+decrypted_char = chr(((ord(c) - ord(‘A’) - (ord(k)- ord(‘A'))) % 26 +
+oda’)
+
+3
+
+
+Faculty of Englneerng & Technology
+
+Subject Name: information and Network Secrity
+
+Parul’ Subject Code: 303105376
+SBE unvetiy NAACG+ B.Tech. CSE Year: 4"/ Semester: 7"
+
+Enroll no. 2203081050109
+
+plaintext += decrypted_char
+
+return plaintext
+
+key = generate_key(len(plaintext))
+
+print" Generated Key:", key)
+
+encrypted = encrypt_otp(plaintext, key)
+decrypted = decrypt_otp(encrypted, key)
+
+print("\nEnerypted Text", encrypted)
+print("Decrypted Text", decrypted)
+
+3
+
+
+Faculty of Engineering & Technology
+
+Parul'
+
+University
+
+SB
+
+ourpuT:
+
+Ns.
+
+ypted Text
+
+ypted Text
+
+NAACG}+
+
+SGBNZGFBRUCFW
+
+JRANUMERTJAAN
+
+Pad. py
+
+Subject Name: information and Network Secrity
+Subject Code: 303105376
+
+B.Tech. CSE Year: 4 /Semester:7"
+
+Enroll no. 2203081050109
+
+
+Faculty of Engineering & Technology
+
+uParl’, NAAC GH Bech. CS Year. @/ Semester: 79
+_ Envol no. 2203051030309
+
+PRACTICAL: 09
+
+All
+
+Implement RSA eneryption-decryption algorithm,
+
+Theory:
+
+‘The RSA (Rivest-Shamir-Adleman) algorithm is one of the most widely
+used public-key cryptographic systems. It is an asymmetric encryption
+method, meaning it uses two keys: a public key for encryption and a private
+key for decryption. The algorithm is based on the mathematical difficulty of
+prime factorization. Specifically, while itis easy to multiply two large prime
+numbers, itis extremely difficult to factorize their product back into primes,
+which ensures security. RSA is extensively used in securing sensitive data,
+digital signatures, and establishing secure communication channels over the
+internet.
+
+‘The RSA algorithm works in four main steps: Key Generation, Key
+Distribution, Encryption, and Decryption. In key generation, two large
+prime numbers are chosen, and their product forms the modulus n. The totient
+function g(n) is computed, and then a public exponent e is chosen such that it
+is coprime with o(n). The private key dis then calculated as the modular
+inverse of e modulo @(n). Once the keys are generated, the public key (e, n)
+is shared openly, while the private key (d, n) is kept secret
+
+‘The encryption process involves converting plaintext into a numerical form
+and then applying the formula C = (P*e) mod n, where C is ciphertext and P is
+the plaintext integer. For decryption, the receiver uses the private key with the
+formula P = (Cd) mod n to retrieve the original plaintext. The correctness of
+RSA is guaranteed by Euler's theorem, which ensures that the decryption
+process reverses the encryption. This makes RSA reliable for both
+confidentiality and authenticity.
+
+Another important aspect of RSA is its use in digital signatures. Instead of
+‘encrypting the message directly, the sender can sign the message using their private
+key, and the recipient can verify it using the sender's public key. This ensures,
+integrity and non- repudiation, proving that the message has not been tampered
+with and verifying the sender's identity. Additionally, RSA can be combined with
+hash functions for efficient signature generation and verification, further improving
+performance.
+
+
+Faculty of Englneerng & Technology
+
+SEL Ret, NAACOH
+
+Program:
+import random
+
+def ged(a, b):
+while b=0:
+a,b=b,a%
+
+bretuma
+
+def mod _inverse(e, phi)
+for d in range(3, phi):
+if(e* d)% phi
+
+return d
+
+return None
+
+def generate_keys()
+
+p=6t
+a3
+
+n=p*q
+phi=(p-1)*(@-1)
+e=17
+
+it ged(e, phi)
+
+Subject Name: information and Network Secrity
+Subject Code: 303105376
+
+B.Tech. CSE Year: 4 /Semester:7"
+
+Enroll no. 2203081050109
+
+raise Exception("e and phi are not coprime")
+
+d= mod_inverse(e, phi)
+
+return ((e,n), (4, m))
+
+Ea
+
+
+Faculty of Engineering & Technology
+
+Subject Name: information and Network Secrity
+
+Parul® Subject Code: 303105376
+SBE unvetiy NAACG}+ B.Tech. CSEVear: 4 /Semester:7™
+
+Enroll no. 2203081050109
+
+def encrypt(public_key, plaintext):
+e,n= public_key
+ciphertext = [pow(ord{char), e, n) for char in plaintext]
+
+return ciphertext
+
+def decrypt(private_key, ciphertext)
+dn
+
+rivate_key
+
+plaintext
+
+" join({chr(pow(char, d,n)) for char in ciphertext)
+
+return plaintext
+
+if _name__=="_main_'
+
+public_Key, private key generate_keys()
+print("Public Key:", public_key)
+
+print("Private Key: private_key)
+
+.ge = input( "Enter message: ") encrypted_msg
+
+sncrypt(public_key, message) print("Enerypted
+Message:", encrypted_msg)
+
+decrypted_msg~decryptiprivate_key, enerypted_msg)
+print("Decrypted Message:", decrypted_msg)
+
+3
+
+
+Faculty of Engineering & Technology
+
+Subject Name: information and Network Secrity
+
+thas Enroll no. 2203051050109
+
+ourpuT:
+
+
+Faculty of Engineering & Technology
+
+uParl’, NAAC GH Bech. CS Year. @/ Semester: 79
+_ Envol no. 2203051030309
+
+PRACTICAL: 10
+
+AIM: Demonstrate working of Digital Signature using Cryptool.
+
+Theory;
+
+A Digital Signature is a mathematical scheme that validates the authenticity
+and integrity of a digital message, document, or software. It is the digital
+‘equivalent of a handwritten signature or a stamped seal but much more
+secure. Digital signatures are widely used in cryptography to provide:
+
+1. Authentication ~ Confirms the sender's identity.
+2. Integrity ~ Ensures the message was not altered in transit
+
+3. Non-repudiation ~ The sender cannot deny sending the message later.
+
+How Digital Signature Works:
+
+1. The sender generates a hash of the message using a hash function (e.g., SHA-
+256),
+
+2. The hash value is encrypted with the sender's private key — this becomes
+the
+
+digital signature.
+
+3. The receiver decrypts the signature using the sender's public key to
+retrieve the hash value.
+
+4. The receiver independently computes the hash of'the received message.
+5. Ifboth hash values match —> the message is authentic and untampered.
+Digital signatures are commonly implemented with RSA, DSA, or ECDSA
+
+algorithms, along with hashing (SHA family).
+Procedure:
+Step 1: Download & Install CrypTool
+1. Goto the official CrypTool wel
+
+ite: htps://www.eryptool.orgien!
+2. Download CrypTool 2 for Windows.
+
+
+Faculty of Engineering & Technology
+
+Universit
+si Enroll ne. 2203051050109
+
+CrypTo0!2 Downloads
+
+3. Install CrypTool by following the setup instructions.
+
+Step 2: Launch CrypTool 2 Application
+
+When you launch, you'll see the Startcenter screen.
+
+‘There are two ways to proceed:
++ Option A (Quick and Easy): Use a ready-made template
+
++ Option B (Manual): Build the digital signature setup yourself
+
+
+acuity of Engineering & Technology
+
+Subject Name: Information and Network Security
+Subject Code: 303105376
+
+B.Tech. CSE Year: 4 /Semester:7"
+
+Enroll no. 2203081050109
+
+ture Workflow.
+
+‘Step 3: Create New Workspace
+
+Inthe Startcenter, click: “Create a new workspace with the graphical
+editor”.
+
+‘Step 4: Add Components to Workspace
++ From the left panel (Components), search and add these components:
+
+Component Name Purpose
+
+‘To input the original message that needs to be
+Text Input digitally signed
+
+RSA Key Generator To generate RSA key pairs (public and private
+keys).
+
+RSA Used twice: one for signing with private key,
+(Encryption/Decryption another for verification with public key.
+)
+
+‘Text Output 2) Todlspay (iia hash, (2) decrypted hash for
+
+
+acuity of Engineering & Technology
+
+Subj Nanton aa Newey
+Baus NAAC(G)H
+
+‘Step 5: Connect the Components
+
+[Text Input] (text)
+
+y
+RSA Block 1 (Signer)
+Inputs:
+Jn RSA Key Gen ({st output)
+3.d CRSA Key Gen (rd output)
+4.m Text Input
+Output:
+5.m_—+ Text Outpat 1 (Signature)
+RSA Block 2
+(Werifir) Inputs:
+Jn OSA Key Gen (st output)
+3. RSA Key Gen (2nd output)
+4.m < From RSA Block 1 (signature)
+Output:
+5.m_— Text Output 2 (Verified Message)
+
+
+acuity of Engineering & Technology
+
+Subject Name: Information and Network Security
+
+—_ sate ere
+EE PAM NAACOH SSPE
+
+Enroll no. 2203081050109
+
+‘Step 6: Enter message and run the setup
+1. Input the Message:
+© Click the Text Input block.
+
+© Type asample message, for
+‘example: "This is a digital
+signature test"
+
+2. Execute the Digital Signature Workflow:
+© Click the Play button on the top toolbar to start the simulation,
+© CrypToo! will process the flow in real-time.
+
+1. Observe the Outputs:
+© Text Output I will display the original SHA-256 hash of the message.
+
+«Text Output 2 will display the decrypted hash (retrieved using the public
+key)
+4. Manual Verification:
+‘© Compare the values in Text Output | and Text Output 2
+© Iboth hashes match exactly the digital signature is valid, confirming:
+= Message authenticity (signed by private key)
+= Message integrity (not modified)
+
+© Ifthey do not match, the message may have been altered or the
+signature is invalid.
+
