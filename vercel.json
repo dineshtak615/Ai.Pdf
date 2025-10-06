@@ -6,10 +6,10 @@
       "use": "@vercel/python"
     },
     {
-      "src": "frontend/package.json",
+      "src": "tailwindcss4/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "frontend/build"
+        "distDir": "tailwindcss4/build"
       }
     }
   ],
@@ -20,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "frontend/build/index.html"
+      "dest": "tailwindcss4/build/index.html"
     }
   ]
 }
